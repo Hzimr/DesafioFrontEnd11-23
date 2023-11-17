@@ -1,8 +1,12 @@
 :root {
   --border-radius: 12px;
+  --white-color: #ffffff;
   --text-light: #ffffff;
+  --text-dark: #2c2c2c;
   --primary-color: #0f52ba;
   --footer-color: #eeeeee;
+  --black-color: #373737;
+  --page-color: #e5e5e5;
 }
 
 * {
