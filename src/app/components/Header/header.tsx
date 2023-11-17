@@ -1,8 +1,7 @@
 'use client'
 
+//Components
 import * as HeaderItems from "./headerStyles"
-//import de imagens & icons
-import Carrinho from "../../assets/Carrinho.svg"
 
 interface HeaderProps {
 
@@ -21,7 +20,7 @@ export function Header(props: HeaderProps){
     <HeaderItems.TagHeader>
       <HeaderItems.ContentHeader>
         <HeaderItems.LogoDiv>
-          <HeaderItems.Logo title="Logo">MKS</HeaderItems.Logo>
+          <HeaderItems.Logo title="Logomarca">MKS</HeaderItems.Logo>
           <HeaderItems.TextLogo>Sistemas</HeaderItems.TextLogo>
         </HeaderItems.LogoDiv>
         <HeaderItems.CarrinhoButton title="Botão de compras">
