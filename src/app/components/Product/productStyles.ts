@@ -19,18 +19,19 @@ export const ProductImg = styled.div`
 export const ProductNameAndPrice = styled.section`
   display: flex;
   flex-direction: row;
-  gap: 0.5rem;
 `
 
 export const ProductNameSection = styled.section`
   display: flex;
   flex-direction: column;
+  padding: 0.875rem;
 `
 
 export const NameText = styled.p`
   font-size: 1rem;
   line-height: 19px;
   color: var(--text-dark);
+  align-text: left;
 `
 
 export const PriceDiv = styled.div`
@@ -51,6 +52,7 @@ export const DescriptionText = styled.p`
   font-size: 0.6rem;
   font-weight: 300;
   color: var(--text-dark);
+  padding: 0.875rem;
 `
 
 export const ComprarButton = styled.button`
@@ -63,6 +65,11 @@ export const ComprarButton = styled.button`
   border: none;
   border-bottom-left-radius: 8px;
   border-bottom-right-radius: 8px;
+
+  &:hover{
+    cursor: pointer;
+    opacity: 0.8;
+  }
 `
 
 

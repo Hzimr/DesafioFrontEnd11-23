@@ -1,6 +1,7 @@
 'use client'
-import React, {useCallback} from "react";
+import React, { useCallback } from "react";
 import { Product } from "../Product/product";
+import styled from "styled-components";
 
 interface ProductGridProps {
 
@@ -13,6 +14,7 @@ type ProductProps = {
   description: string;
   price: number;
 }
+
 
 const produtos: ProductProps[] = [
   {
@@ -31,8 +33,26 @@ const produtos: ProductProps[] = [
   },
 ]
 
+export const PageProductDiv = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--page-color);
+`
+
+export const ContentProductsDiv = styled.div`
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  max-width: 1200px;
+  padding: 1rem;
+`
+
 export function ProductGrid(props: ProductGridProps){
-  
+  //const [produtos, setProdutos] = useState([]);
+
+ 
   const handleRenderizeProdutos = useCallback(() => {
     return produtos.length !== 0 ? (
       produtos.map(produtos => (
@@ -53,10 +73,10 @@ export function ProductGrid(props: ProductGridProps){
   }, []);
 
   return (
-    <div>
-      <div>
+    <PageProductDiv>
+      <ContentProductsDiv>
         {handleRenderizeProdutos()}
-      </div>
-    </div>
+      </ContentProductsDiv>
+    </PageProductDiv>
   )
 }
