@@ -9,19 +9,27 @@ export const TagHeader = styled.header`
 export const ContentHeader = styled.div`
   display: flex;
   justify-content: space-between;
-  padding-top: 1.5rem;
-  padding-bottom: 1.5rem;
-  padding-left: 4rem;
-  padding-right: 5.5rem;
 
   @media (min-width: 0px) {
     width: 320px;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    padding-left: 2rem;
+    padding-right: 2.5rem;
   }
   @media (min-width: 320px) {
     width: calc(320px + (1440 - 320) * ((100vw - 320px) / (1440 - 320)));
-  }
+    padding-top: calc(1rem + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
+    padding-bottom: calc(1rem + (24 - 16) * ((100vw - 320px) / (1440 - 320)));
+    padding-left: calc(2rem + (64 - 32) * ((100vw - 320px) / (1440 - 320))); 
+    padding-right: calc(2.5rem + (88 - 40) * ((100vw - 320px) / (1440 - 320))); 
+    }
   @media (min-width: 1440px) {
     width: 1440px;
+    padding-top: 1.5rem;
+    padding-bottom: 1.5rem;
+    padding-left: 4rem;
+    padding-right: 5.5rem;
   }
 `
 
@@ -30,6 +38,11 @@ export const LogoDiv = styled.div`
   justify-content: row;
   align-items: center;
   gap: 0.25rem;
+
+  @media(max-width: 480px) {
+    flex-direction: column;
+    gap: 0.7rem;
+  }
 `
 
 export const Logo = styled.a`
